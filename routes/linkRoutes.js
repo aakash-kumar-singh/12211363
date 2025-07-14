@@ -19,7 +19,7 @@ router.post("/shorturls", async (req, res) => {
     return res.status(400).json({ message: "URL is required" });
   }
   try {
-    new URL(url); // validate format
+    new URL(url);
   } catch {
     return res.status(400).json({ message: "Invalid URL format" });
   }
